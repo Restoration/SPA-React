@@ -112,7 +112,7 @@ This time,Create Home,About and Contact page.
 $ vim src/Home.js
 ```
 
-```
+```JavaScript
 import React, { Component } from "react";
  
 class Home extends Component {
@@ -133,7 +133,7 @@ export default Home;
 ```
 $ vim src/About.js
 ```
-```
+```JavaScript
 import React, { Component } from "react";
  
 class About extends Component {
@@ -154,7 +154,7 @@ export default About;
 $ vim src/Contact.js
 ```
 
-```
+```Javascript
 import React, { Component } from "react";
  
 class Contact extends Component {
@@ -175,7 +175,7 @@ export default Contact;
 ## Routing process
 Edit Main.js to use router
 
-```
+```JavaScript
 import React, { Component } from "react";
 import {
   Route,

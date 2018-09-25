@@ -5,7 +5,8 @@ class Home extends Component {
     return (
       <div>
         <h2>HELLO</h2>
-        <p>Hello World!! This page is top page. </div>
+        <p>Hello World!! This page is top page.</p>
+      </div>
     );
   }
 }

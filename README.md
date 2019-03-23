@@ -3,12 +3,11 @@
 ## Flow of implementation
 1. Prepare environment
 1. Create main page
-1. Create content page
+1. Create content each page
 1. Routing process
 1. Navigation process
 
 ## Prepare environment
-
 ```
 $ yaourt -S create-react-app
 $ create-react-app app
@@ -28,13 +27,14 @@ create-react-app is [Toolchains](https://en.wikipedia.org/wiki/Toolchain).
 - Next.js (For Node.js development)
 - Gatsby(For static content websites)
 
-This time I will use Create React App for SPA development
+
+In this project, it needs bellow packages to create single page application.
 
 - [AUR (en) - create-react-app - Arch Linux](https://aur.archlinux.org/packages/create-react-app/)
 - [react-router-dom - npm](https://www.npmjs.com/package/react-router-dom) 
 
 ## Create main page
-Edit index.html  in public folder
+Edit index.html in public folder
 ```
 $ vim public/index.html
 ```
@@ -57,7 +57,7 @@ $ vim public/index.html
 </html>
 ```
 
-It is base page, then edit index.js  that only contents in the root of div are replaced.
+It is base layout, then edit index.js that only contents in the root of div are replaced.
 ```
 $ vim src/index.js
 ```
@@ -73,7 +73,7 @@ ReactDOM.render(
 );
 ```
 
-This index.html is a frame of SPA and becomes a common parts and It will construct common parts.
+The id root put main component.
 
 ```
 $ vim src/Main.js
@@ -101,7 +101,6 @@ class Main extends Component {
  
 export default Main;
 ```
-
 
 This Main.js is a common part to be generated using React.
 This part is a part to be dynamically operated, it is necessary to control by React.
@@ -209,11 +208,9 @@ class Main extends Component {
 }
 export default Main;
 ```
+Import `Route,NavLink,BrowserRouter` these tags need router process then, you have to rewrite render function to implement routing.
 
-Import `Route,NavLink,BrowserRouter`
-Next, Change link and content path.
-
-Finaly, Confirm page.
+Make sure your application
 ```
 $ npm start
 ```
